@@ -27,3 +27,25 @@ const EmployeeCard = ({ employee }: EmployeeCardProps) => {
 };
 
 export default EmployeeCard;
+
+const peoples = {
+	users: [
+		{ user: "Bob", age: 40 },
+		{ user: "Cindy", age: 32 },
+		{ user: "Paul", age: 36 },
+	],
+	workers: [
+		{ worker: "Antoine", age: 19 },
+		{ worker: "Angela", age: 25 },
+		{ worker: "Melanie", age: 23 },
+	],
+};
+
+const updatedPeoples = {
+	...peoples,
+	workers: peoples.workers.map((workerItem) =>
+		workerItem.worker === "Angela" ? { ...workerItem, age: 35 } : workerItem,
+	),
+};
+
+console.log(updatedPeoples);
