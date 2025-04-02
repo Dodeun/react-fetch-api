@@ -12,14 +12,15 @@ interface EmployeeCardProps {
 }
 
 const EmployeeCard = ({ employee }: EmployeeCardProps) => {
+	const { name, email, picture } = employee;
 	return (
 		<figure className="DisplayEmployee">
-			<img src={employee.picture.medium} alt={employee.name.first} />
+			<img src={picture.medium} alt={name.first} />
 			<figcaption>
 				<strong>
-					{employee.name.first} {employee.name.last}
+					{name.first} {name.last}
 				</strong>
-				{employee.email}
+				{email}
 			</figcaption>
 		</figure>
 	);
