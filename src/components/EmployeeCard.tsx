@@ -20,7 +20,7 @@ const EmployeeCard = ({ employee }: EmployeeCardProps) => {
 				<strong>
 					{name.first} {name.last}
 				</strong>
-				{email}
+				{` ${email}`}
 			</figcaption>
 		</figure>
 	);
