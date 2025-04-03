@@ -20,7 +20,9 @@ function App() {
 		fetch("http://localhost:3310/api/employees")
 			.then((response) => response.json())
 			.then((data) => {
-				setEmployee(data.results[0]);
+				setEmployee(
+					data.results[Math.floor(Math.random() * data.results.length)],
+				);
 			});
 	};
 
