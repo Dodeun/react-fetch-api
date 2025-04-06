@@ -14,7 +14,7 @@ interface EmployeeCardProps {
 const EmployeeCard = ({ employee }: EmployeeCardProps) => {
 	const { name, email, picture } = employee;
 	return (
-		<figure className="DisplayEmployee">
+		<figure className="displayEmployee">
 			<img src={picture.medium} alt={name.first} />
 			<figcaption>
 				<strong>
